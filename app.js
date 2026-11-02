@@ -4,14 +4,14 @@
   const githubUrl = "https://github.com/JitendraDew009";
   const linkedinUrl = "https://www.linkedin.com/in/jitendradewangan/";
   const emailAddress = "dewanganjitendra725@gmail.com";
-  const phoneNumber = "+91 8982959790";
   const resumeUrl = "assets/Jitendra-Dewangan-Resume.pdf";
 
   const projects = [
     {
       id: "nutri-ninja",
       file: "nutri_ninja.py",
-      name: "Nutri Ninja",
+      name: "Nutri Ninja 5.0",
+      repoUrl: "https://github.com/JitendraDew009/Nutri-Ninja-5.0",
       category: "AI Product · Food Intelligence · Computer Vision",
       description: "An AI-powered nutrition assistant with barcode-based food identification, OCR, and a FastAPI backend, built to turn food information into useful nutrition insights.",
       problem: "Nutrition labels can be difficult to scan quickly, and ingredient information is not always easy to compare.",
@@ -21,14 +21,15 @@
       architecture: "The résumé describes an application workflow integrating barcode/OCR processing, AI services, REST APIs, and a FastAPI backend. Detailed component boundaries and deployment architecture were not specified.",
       contribution: "Built an AI-powered nutrition assistant, integrating AI services, OCR/barcode processing, REST APIs, and a FastAPI backend in a product-oriented workflow.",
       challenges: "Specific implementation challenges and resolutions were not documented in the supplied résumé.",
-      status: "Built; repository link not supplied",
-      future: ["Document data sources and nutrition-data limitations", "Add verified implementation details and repository link", "Evaluate recommendations for clarity and safety"],
+      status: "Built; repository available",
+      future: ["Document data sources and nutrition-data limitations", "Add verified implementation details", "Evaluate recommendations for clarity and safety"],
       keywords: "nutrition food barcode ingredients computer vision product"
     },
     {
       id: "enterprise-rag-assistant",
       file: "enterprise_rag_assistant.py",
       name: "Enterprise Knowledge AI Assistant",
+      repoUrl: "https://github.com/JitendraDew009/Enterprise-Knowledge-AI-Assistant-",
       category: "Generative AI · RAG · Enterprise Applications",
       description: "An in-progress RAG knowledge assistant for querying enterprise documents with document processing, embeddings, semantic retrieval, and LLM-generated responses.",
       problem: "Finding a reliable answer across a large collection of internal documents can require time-consuming manual search.",
@@ -46,6 +47,7 @@
       id: "agentic-ai-weather",
       file: "agentic_ai_weather.py",
       name: "Agentic AI Weather Agent",
+      repoUrl: "https://github.com/JitendraDew009/Agentic-AI-Weather-Agent-and-Coding-Agent-CLI-",
       category: "AI Agents · API Integration",
       description: "A weather-agent concept that interprets a user question, selects a suitable weather tool, and presents a useful response.",
       problem: "A natural-language weather question may require translating intent into a structured request to an external data source.",
@@ -63,6 +65,7 @@
       id: "coding-agent-cli",
       file: "coding_agent_cli.py",
       name: "Coding Agent CLI",
+      repoUrl: "https://github.com/JitendraDew009/Agentic-AI-Weather-Agent-and-Coding-Agent-CLI-",
       category: "Developer Tools · AI Automation",
       description: "A command-line coding assistant concept for making AI-supported programming workflows easier to access and understand.",
       problem: "Developers need a predictable way to provide context to an AI coding workflow and review what it proposes.",
@@ -80,6 +83,7 @@
       id: "agent-chatbot",
       file: "agent_chatbot.py",
       name: "Agent ChatBot",
+      repoUrl: "https://github.com/JitendraDew009/Agent-Chat-Bot",
       category: "Generative AI · LLM Applications",
       description: "A Python chatbot connecting user prompts to Google Gemini through a LangChain workflow for interactive, context-aware responses.",
       problem: "Provide an approachable conversational interface that connects user prompts to a language model.",
@@ -89,9 +93,27 @@
       architecture: "The résumé describes a Python workflow that connects user prompts with Google Gemini through LangChain. Specific memory, hosting, and evaluation details were not supplied.",
       contribution: "Built the chatbot workflow and applied prompt and conversation-flow concepts for context-aware AI interactions.",
       challenges: "Specific implementation challenges and evaluation results were not included in the supplied résumé.",
-      status: "Built; repository link not supplied",
-      future: ["Add verified repository/demo links", "Document conversation context behavior", "Add a small evaluation set and failure examples"],
+      status: "Built; repository available",
+      future: ["Document conversation context behavior", "Add a small evaluation set and failure examples"],
       keywords: "agent chatbot langchain google gemini conversational ai"
+    },
+    {
+      id: "yatra-agent",
+      file: "yatra_agent.py",
+      name: "Yatra Agent",
+      repoUrl: "https://github.com/JitendraDew009/Yatra_Agent",
+      category: "AI Agents · Travel",
+      description: "Explore the Yatra Agent repository for project details and implementation.",
+      problem: "Project-specific problem details are documented in the repository.",
+      solution: "See the repository for the project workflow and implementation.",
+      features: ["Project details available in the repository"],
+      stack: [],
+      architecture: "See the repository for architecture and implementation details.",
+      contribution: "See the repository for project and contribution details.",
+      challenges: "Project-specific challenges have not been supplied here.",
+      status: "Repository available",
+      future: ["Document project features and implementation details"],
+      keywords: "yatra travel agent"
     },
     {
       id: "mobilenet-transfer-learning",
@@ -183,8 +205,7 @@
       { id: "ai-product-ideas", name: "ai_product_ideas.md", language: "Markdown" }
     ] },
     { folder: "contact", files: [
-      { id: "contact", name: "contact.json", language: "JSON" },
-      { id: "contact-page", name: "contact.md", language: "Markdown" }
+      { id: "contact", name: "contact.json", language: "JSON" }
     ] },
     { folder: "", files: [
       { id: "readme", name: "README.md", language: "Markdown" },
@@ -328,7 +349,6 @@
         "llm-engineering": renderLlmEngineering,
         "ai-product-ideas": renderProductIdeas,
         contact: () => renderCode(renderJsonFile("contact"), "JSON"),
-        "contact-page": renderContact,
         requirements: renderRequirements,
         package: renderPackage
       };
@@ -381,13 +401,13 @@
   }
 
   function projectCard(project) {
-    const repo = findRepo(project);
+    const repoUrl = project.repoUrl || findRepo(project)?.html_url;
     return `<article class="project-card">
       <div class="project-top"><span class="project-category">${escapeHtml(project.category)}</span><span class="muted" aria-label="${escapeHtml(project.status)}">↗</span></div>
       <h3>${escapeHtml(project.name)}</h3>
       <p>${escapeHtml(project.description)}</p>
       <div class="tag-list">${project.stack.slice(0, 4).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
-      <div class="card-links"><button class="button" type="button" data-open="${escapeHtml(project.id)}">Read project brief</button>${repo ? `<a class="text-link" href="${escapeHtml(repo.html_url)}" target="_blank" rel="noopener noreferrer">Repository ↗</a>` : ""}</div>
+      <div class="card-links"><button class="button" type="button" data-open="${escapeHtml(project.id)}">Read project brief</button>${repoUrl ? `<a class="text-link" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">Repository ↗</a>` : ""}</div>
     </article>`;
   }
 
@@ -402,12 +422,13 @@
 
   function renderProject(project) {
     const repo = findRepo(project);
+    const repoUrl = project.repoUrl || repo?.html_url;
     return `<article class="project-detail">
       <p class="eyebrow">PROJECTS / ${escapeHtml(project.file)}</p>
       <span class="project-category">${escapeHtml(project.category)}</span>
       <h1 class="project-title">${escapeHtml(project.name)}</h1>
       <p class="lead">${escapeHtml(project.description)}</p>
-      <div class="button-row"><span class="tag">${escapeHtml(project.status)}</span>${repo ? `<a class="button" href="${escapeHtml(repo.html_url)}" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>` : `<span class="tag">Repository link not supplied</span>`}</div>
+      <div class="button-row"><span class="tag">${escapeHtml(project.status)}</span>${repoUrl ? `<a class="button" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>` : `<span class="tag">Repository link not supplied</span>`}</div>
       <p class="callout">Scope and feature ideas below reflect the supplied brief. Proposed items are not claims of completed implementation; no performance, deployment, or user metrics have been provided.</p>
       <div class="detail-grid">
         <section class="info-card"><h3>Problem</h3><p>${escapeHtml(project.problem)}</p></section>
@@ -419,7 +440,7 @@
         <section class="info-card"><h3>Challenges & solutions</h3><p>${escapeHtml(project.challenges)}</p></section>
         <section class="info-card"><h3>Future improvements</h3><ul>${project.future.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section>
       </div>
-      <section class="editor-section"><h2 class="section-heading">Related public repositories</h2>${repo ? renderRepoCard(repo) : renderRepositories()}</section>
+      <section class="editor-section"><h2 class="section-heading">Related public repositories</h2>${repo ? renderRepoCard(repo) : repoUrl ? `<a class="text-link" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">Open ${escapeHtml(project.name)} on GitHub ↗</a>` : renderRepositories()}</section>
     </article>`;
   }
 
@@ -489,7 +510,7 @@
 
   function renderResume() {
     return `${sectionHeader("Resume", "PORTFOLIO / RESUME.MD", "Résumé summary based on the PDF supplied for this portfolio.")}
-      <div class="resume-heading"><img src="assets/jitendra-dewangan.jpg" alt="" width="768" height="1152"><div><h2 class="section-heading">Jitendra Dewangan</h2><p><strong>GenAI / AI Engineer | LLM | RAG | Agentic AI | Python</strong></p><p>Bengaluru, Karnataka · <a href="tel:+918982959790">+91 89829 59790</a> · <a href="mailto:${emailAddress}">${emailAddress}</a></p><p><a class="text-link" href="${githubUrl}" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="text-link" href="${linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></div></div>
+      <div class="resume-heading"><img src="assets/jitendra-dewangan.jpg" alt="" width="768" height="1152"><div><h2 class="section-heading">Jitendra Dewangan</h2><p><strong>GenAI / AI Engineer | LLM | RAG | Agentic AI | Python</strong></p><p>Bengaluru, Karnataka · <a href="mailto:${emailAddress}">${emailAddress}</a></p><p><a class="text-link" href="${githubUrl}" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="text-link" href="${linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></div></div>
       <p class="lead">AI Engineer with hands-on experience in Python, machine learning, LangChain, Google Gemini API, FastAPI, SQL, REST APIs, and AI application development. Built LLM-powered applications including a LangChain + Gemini chatbot and an AI nutrition assistant, and currently developing a retrieval-augmented enterprise knowledge assistant.</p>
       <section class="editor-section"><h2 class="section-heading">Technical skills</h2><div class="tag-list">${["Python", "SQL", "JavaScript", "HTML", "CSS", "LangChain", "Google Gemini API", "OpenAI", "Agentic AI", "RAG", "Embeddings", "Vector Search", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "OCR", "FastAPI", "REST APIs", "MySQL", "PostgreSQL", "MongoDB", "Docker (Basic)", "AWS (Basic)", "Power BI", "Tableau"].map(tag => `<span class="tag">${tag}</span>`).join("")}</div></section>
       <section class="editor-section"><h2 class="section-heading">Selected projects</h2><div class="project-grid">${projects.map(projectCard).join("")}</div></section>
@@ -526,27 +547,6 @@
         <article class="info-card"><h3>Keep people in control</h3><p>Where should an AI workflow suggest, explain, or prepare an action—and where should it ask for confirmation?</p></article>
         <article class="info-card"><h3>Measure product quality</h3><p>Define successful user outcomes and failure costs before selecting a model or building an agent.</p></article>
         <article class="info-card"><h3>Design for graceful failure</h3><p>Make uncertainty, unavailable data, and service errors understandable and recoverable.</p></article>
-      </div>`;
-  }
-
-  function renderContact() {
-    return `${sectionHeader("Get in touch", "CONTACT / CONTACT.MD", "For conversations about AI products, machine learning, or software engineering.")}
-      <div class="contact-layout">
-        <form class="contact-card" id="contactForm">
-          <p class="form-note">Demonstration mode: no message is sent or stored. A secure form endpoint must be configured before this form can deliver messages.</p>
-          <div class="form-field"><label for="contactName">Name</label><input id="contactName" name="name" required minlength="2" autocomplete="name" aria-describedby="contactFormMessage"></div>
-          <div class="form-field"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" required autocomplete="email" aria-describedby="contactFormMessage"></div>
-          <div class="form-field"><label for="contactSubject">Subject</label><input id="contactSubject" name="subject" required minlength="3"></div>
-          <div class="form-field"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" required minlength="10"></textarea></div>
-          <button class="button primary" type="submit">Validate message</button>
-          <p id="contactFormMessage" class="form-note" role="status">Fields are validated locally; submitting will not send your message.</p>
-        </form>
-        <aside class="contact-card"><h2 class="section-heading">Contact & profiles</h2><div class="social-list">
-          <a href="mailto:${emailAddress}"><span>Email</span><span>${emailAddress} ↗</span></a>
-          <a href="tel:+918982959790"><span>Phone</span><span>${phoneNumber}</span></a>
-          <a href="${githubUrl}" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>JitendraDew009 ↗</span></a>
-          <a href="${linkedinUrl}" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>Jitendra Dewangan ↗</span></a>
-        </div><p class="callout">The form is in demonstration mode and does not send messages. Email and phone links open your email or calling app.</p></aside>
       </div>`;
   }
 
@@ -587,7 +587,6 @@
       name: "Jitendra Dewangan",
       role: "AI Product Engineer",
       location: "Bengaluru, Karnataka, India",
-      phone: phoneNumber,
       github: githubUrl,
       linkedin: linkedinUrl,
       email: emailAddress
@@ -659,7 +658,6 @@
       { id: "machine-learning", title: "Machine learning projects", text: mlProjects.map(item => `${item.name} ${item.keywords}`).join(" ") },
       { id: "llm-engineering", title: "LLM engineering notes", text: "retrieval grounded citations evaluation reliability timeout provider error product design uncertainty" },
       { id: "ai-product-ideas", title: "AI product ideas", text: "useful user problems evidence product quality graceful failure people control" },
-      { id: "contact-page", title: "Contact", text: "contact form email LinkedIn GitHub demonstration mode message validation" }
     ].map(entry => ({ detail: "portfolio content", ...entry }));
     return [...projectEntries, ...skillEntries, ...pageEntries, ...fileEntries];
   }
@@ -685,7 +683,7 @@
       $("#globalSearchInput")?.focus();
     } else {
       renderExplorer();
-      const idByPanel = { explorer: state.activeFile, projects: "projects", skills: "skills-dashboard", experience: "experience", contact: "contact-page", resume: "resume" };
+      const idByPanel = { explorer: state.activeFile, projects: "projects", skills: "skills-dashboard", experience: "experience", contact: "contact", resume: "resume" };
       if (idByPanel[panel]) openFile(idByPanel[panel]);
     }
     document.querySelectorAll(".activity-button[data-panel]").forEach(button => {
@@ -788,7 +786,7 @@
       skills: () => skills.map(skill => skill.name).join(" · "),
       projects: () => `Available project briefs:\n${projects.map((project, index) => `${index + 1}. ${project.name}`).join("\n")}\nOpening the project explorer…`,
       experience: () => "Training: AI Engineering Training, DataMites, Bangalore (details to verify).\nInternship and MCA details are placeholders pending verified dates and information.",
-      contact: () => "Contact form is in demonstration mode; no messages are sent.\nLinkedIn: " + linkedinUrl,
+      contact: () => "Open the Contact panel to view public contact details.\nLinkedIn: " + linkedinUrl,
       github: () => `GitHub: ${githubUrl}`,
       linkedin: () => `LinkedIn: ${linkedinUrl}`,
       resume: () => "Opening the supplied résumé PDF and portfolio summary…",
@@ -992,20 +990,6 @@
       state.historyIndex = Math.min(state.historyIndex + 1, state.terminalHistory.length);
       event.currentTarget.value = state.terminalHistory[state.historyIndex] || "";
     }
-  });
-
-  document.addEventListener("submit", event => {
-    if (event.target.id !== "contactForm") return;
-    event.preventDefault();
-    const form = event.target;
-    const status = $("#contactFormMessage");
-    if (!form.reportValidity()) {
-      status.textContent = "Please correct the highlighted fields before continuing.";
-      status.setAttribute("role", "alert");
-      return;
-    }
-    status.textContent = "The form passed local validation, but no message was sent. Configure a secure form endpoint to enable delivery.";
-    status.setAttribute("role", "status");
   });
 
   $("#copyrightYear").textContent = new Date().getFullYear();
