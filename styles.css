@@ -165,6 +165,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .project-detail { max-width: 850px; }
 .project-detail .project-title { margin: 9px 0 5px; color: var(--text-strong); font-size: clamp(25px, 4vw, 35px); letter-spacing: -.04em; }
 .project-detail .lead { max-width: 720px; margin: 9px 0 20px; color: #bcbcbc; font-size: 15px; line-height: 1.7; }
+.project-demo { max-width: 504px; }
+.project-demo iframe { display: block; width: 100%; max-width: 100%; border: 0; }
 .detail-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
 .info-card { padding: 15px; }
 .info-card h3 { margin: 0 0 10px; color: var(--text-strong); font-size: 12px; }
@@ -174,9 +176,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .filter-row { display: flex; flex-wrap: wrap; gap: 7px; margin: 15px 0 17px; }
 .filter-chip { min-height: 28px; padding: 0 10px; border: 1px solid var(--border); border-radius: 14px; background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; }
 .filter-chip[aria-pressed="true"], .filter-chip:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--text-strong); }
-.skill-card { padding: 13px; }
-.skill-card p { margin: 7px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
-.skill-card .skill-category { color: var(--cyan); font-family: var(--code); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+.skill-badge-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+.skill-badge-group { min-width: 0; margin: 27px 0; }
+.skill-badge-group .section-heading { margin-bottom: 15px; }
+.skill-badge-list { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.skill-badge-item { display: flex; min-height: 42px; align-items: center; justify-content: center; padding: 6px; animation: skill-badge-enter .38s ease-out both; animation-delay: calc(var(--skill-index, 0) * 35ms); transition: transform .18s ease; }
+.skill-badge-item:hover { transform: translateY(-2px); }
+.skill-badge-item img { display: block; width: auto; max-width: 100%; height: 28px; object-fit: contain; }
+@keyframes skill-badge-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .skill-badge-item { animation: none; transition: none; } }
+@media (max-width: 640px) { .skill-badge-groups { grid-template-columns: 1fr; } }
 .timeline { position: relative; margin: 20px 0; padding-left: 24px; }
 .timeline::before { position: absolute; top: 6px; bottom: 4px; left: 6px; width: 1px; background: var(--border); content: ""; }
 .timeline-card { position: relative; margin-bottom: 13px; padding: 15px; }

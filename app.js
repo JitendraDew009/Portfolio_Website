@@ -12,6 +12,7 @@
       file: "nutri_ninja.py",
       name: "Nutri Ninja 5.0",
       repoUrl: "https://github.com/JitendraDew009/Nutri-Ninja-5.0",
+      demoEmbedUrl: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480121015457603584?compact=1",
       category: "AI Product · Food Intelligence · Computer Vision",
       description: "An AI-powered nutrition assistant with barcode-based food identification, OCR, and a FastAPI backend, built to turn food information into useful nutrition insights.",
       problem: "Nutrition labels can be difficult to scan quickly, and ingredient information is not always easy to compare.",
@@ -102,6 +103,8 @@
       file: "yatra_agent.py",
       name: "Yatra Agent",
       repoUrl: "https://github.com/JitendraDew009/Yatra_Agent",
+      liveUrl: "https://jitendradew009.github.io/Yatra_Agent/",
+      demoEmbedUrl: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7522716989685993472?compact=1",
       category: "AI Agents · Travel",
       description: "Explore the Yatra Agent repository for project details and implementation.",
       problem: "Project-specific problem details are documented in the repository.",
@@ -135,56 +138,46 @@
   ];
 
   const mlProjects = [
-    { name: "Customer Transaction Prediction", keywords: "customer transaction prediction machine learning" },
-    { name: "Flight Fare Prediction", keywords: "flight fare prediction regression" },
-    { name: "Skin Disorder Classification", keywords: "skin disorder classification machine learning" },
-    { name: "Rice Leaf Disease Classification using CNN", keywords: "rice leaf disease classification cnn" },
-    { name: "Computer Vision MobileNet Transfer Learning", keywords: "computer vision mobilenet transfer learning tensorflow" }
+    { name: "Customer Transaction Prediction", repoUrl: "https://github.com/JitendraDew009/Customer_Transaction_Prediction", description: "Predicts whether a customer will make a future transaction using anonymized customer records.", keywords: "customer transaction prediction future anonymized records machine learning" },
+    { name: "Flight Fare Prediction", repoUrl: "https://github.com/JitendraDew009/Flight_Price_Prediction", description: "Analyzes historical Indian flight fare data and predicts airfare using route, airline, schedule, and trip characteristics.", keywords: "flight fare prediction regression Indian airfare" },
+    { name: "Skin Disorder Classification", repoUrl: "https://github.com/JitendraDew009/Skin-Disorder-Classification-and-Data-Analysis", description: "Classifies skin disorders from a dermatology dataset, using clinical and histopathological features to build a predictive model.", keywords: "skin disorder classification machine learning dermatology clinical histopathological features" },
+    { name: "Rice Leaf Disease Classification using CNN", repoUrl: "https://github.com/JitendraDew009/RiceLeaf_disease_detection", description: "Classifies rice leaf diseases from images by distinguishing disease categories based on visual symptoms on the leaf surface.", keywords: "rice leaf disease classification cnn image visual symptoms" },
+    { name: "Computer Vision MobileNet Transfer Learning", repoUrl: "https://github.com/JitendraDew009/Computer-Vision-MobileNet_Transfer-Learning", description: "A Jupyter Notebook demonstrating how to fine-tune MobileNet on a custom dataset and prepare a model for mobile deployment.", keywords: "computer vision mobilenet transfer learning tensorflow custom dataset mobile deployment jupyter notebook" }
   ];
 
   const skills = [
-    { name: "Python", category: "Programming", description: "Used in AI, machine learning, data processing, and backend application development." },
-    { name: "SQL", category: "Programming", description: "Listed technical skill for querying structured data." },
-    { name: "JavaScript", category: "Programming", description: "Listed technical skill; project usage details can be added when confirmed." },
-    { name: "HTML", category: "Programming", description: "Listed technical skill for structuring web pages." },
-    { name: "CSS", category: "Programming", description: "Listed technical skill for styling web pages." },
-    { name: "NumPy", category: "Machine Learning", description: "Numerical computing with Python." },
-    { name: "Pandas", category: "Machine Learning", description: "Data manipulation and analysis with Python." },
-    { name: "Matplotlib", category: "Machine Learning", description: "Data visualization and exploratory analysis." },
-    { name: "Statistics", category: "Machine Learning", description: "Statistical reasoning for data exploration and model evaluation." },
-    { name: "Exploratory Data Analysis", category: "Machine Learning", description: "Understanding data distributions, relationships, and quality." },
-    { name: "Regression", category: "Machine Learning", description: "A supervised-learning problem family for predicting continuous outcomes." },
-    { name: "Classification", category: "Machine Learning", description: "A supervised-learning problem family for predicting discrete labels." },
-    { name: "Clustering", category: "Machine Learning", description: "Unsupervised grouping of similar observations." },
-    { name: "Model Evaluation", category: "Machine Learning", description: "Choosing task-appropriate metrics and assessing model behavior." },
-    { name: "Feature Engineering", category: "Machine Learning", description: "Preparing useful input representations for a model." },
-    { name: "TensorFlow", category: "Machine Learning", description: "Deep-learning framework used in the MobileNet transfer-learning project." },
-    { name: "Scikit-learn", category: "Machine Learning", description: "Python machine-learning library used in internship workflows." },
-    { name: "Deep Learning", category: "Generative AI", description: "Neural-network methods, including computer-vision transfer learning." },
-    { name: "Natural Language Processing", category: "Generative AI", description: "NLP fundamentals and text processing." },
-    { name: "LLM Applications", category: "Generative AI", description: "Built chatbot and nutrition-assistant workflows; currently developing a RAG assistant." },
-    { name: "LangChain", category: "Generative AI", description: "Used to build a Gemini chatbot; also used in the in-progress knowledge assistant." },
-    { name: "Google Gemini API", category: "Generative AI", description: "Integrated into the Agent ChatBot project." },
-    { name: "OpenAI", category: "Generative AI", description: "AI service used in the Nutri Ninja project." },
-    { name: "Prompt Engineering", category: "Generative AI", description: "Listed technical skill and applied to chatbot workflows." },
-    { name: "Retrieval-Augmented Generation", category: "Generative AI", description: "Developing a document-grounded knowledge assistant with embeddings and semantic retrieval." },
-    { name: "Embeddings & Vector Search", category: "Generative AI", description: "Exploring embedding generation, vector databases, and semantic retrieval in the RAG project." },
-    { name: "AI Agents", category: "Generative AI", description: "Agentic AI workflows listed as an area of interest and technical focus." },
-    { name: "OpenCV & OCR", category: "Generative AI", description: "Computer-vision and OCR technologies listed in the résumé and Nutri Ninja stack." },
-    { name: "REST APIs", category: "Software Engineering", description: "HTTP interfaces for integrating application services." },
-    { name: "FastAPI", category: "Software Engineering", description: "Python framework for building APIs." },
-    { name: "React Native", category: "Software Engineering", description: "Mobile UI technology used in the Nutri Ninja project." },
-    { name: "Docker", category: "Software Engineering", description: "Basic familiarity as stated in the résumé." },
-    { name: "AWS", category: "Software Engineering", description: "Basic familiarity as stated in the résumé." },
-    { name: "MySQL, PostgreSQL & MongoDB", category: "Software Engineering", description: "Databases listed in the résumé." },
-    { name: "Vector Database Concepts", category: "Software Engineering", description: "Listed as a technical area; specific database implementation is not supplied." },
-    { name: "JSON", category: "Software Engineering", description: "Data format used in API and application workflows." },
-    { name: "React", category: "Software Engineering", description: "React Native is listed for Nutri Ninja; web React experience is not separately confirmed." },
-    { name: "Git and GitHub", category: "Software Engineering", description: "Version control and collaborative software development." },
-    { name: "VS Code", category: "Tools", description: "Code editor and development environment." },
-    { name: "Jupyter Notebook", category: "Tools", description: "Interactive environment for data science and experimentation." },
-    { name: "Power BI", category: "Tools", description: "Business intelligence and data visualization tool." },
-    { name: "Tableau", category: "Tools", description: "Data visualization and analytics platform." }
+    { name: "Python", category: "Programming Languages", badgeUrl: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" },
+    { name: "JavaScript", category: "Programming Languages", badgeUrl: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" },
+    { name: "TypeScript", category: "Programming Languages", badgeUrl: "https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" },
+    { name: "SQL", category: "Programming Languages", badgeUrl: "https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" },
+    { name: "LangChain", category: "AI & LLM Frameworks", badgeUrl: "https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" },
+    { name: "LangGraph", category: "AI & LLM Frameworks", badgeUrl: "https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" },
+    { name: "OpenAI", category: "AI & LLM Frameworks", badgeUrl: "https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" },
+    { name: "Google Gemini", category: "AI & LLM Frameworks", badgeUrl: "https://img.shields.io/badge/Google%20Gemini-8F7EE7?style=for-the-badge&logo=google&logoColor=white" },
+    { name: "RAG Systems", category: "AI & LLM Frameworks", badgeUrl: "https://img.shields.io/badge/RAG%20Systems-FF6B6B?style=for-the-badge&logoColor=white" },
+    { name: "FastAPI", category: "Backend & API Development", badgeUrl: "https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" },
+    { name: "Flask", category: "Backend & API Development", badgeUrl: "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" },
+    { name: "Django", category: "Backend & API Development", badgeUrl: "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" },
+    { name: "REST API", category: "Backend & API Development", badgeUrl: "https://img.shields.io/badge/REST%20API-02569B?style=for-the-badge&logo=fastapi&logoColor=white" },
+    { name: "Node.js", category: "Backend & API Development", badgeUrl: "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" },
+    { name: "React Native", category: "Mobile Development", badgeUrl: "https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" },
+    { name: "Expo", category: "Mobile Development", badgeUrl: "https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" },
+    { name: "MongoDB", category: "Databases & Vector Stores", badgeUrl: "https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" },
+    { name: "PostgreSQL", category: "Databases & Vector Stores", badgeUrl: "https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" },
+    { name: "MySQL", category: "Databases & Vector Stores", badgeUrl: "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" },
+    { name: "Pinecone", category: "Databases & Vector Stores", badgeUrl: "https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logoColor=white" },
+    { name: "NumPy", category: "Data Science & ML", badgeUrl: "https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" },
+    { name: "Pandas", category: "Data Science & ML", badgeUrl: "https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" },
+    { name: "Scikit-Learn", category: "Data Science & ML", badgeUrl: "https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" },
+    { name: "OpenCV", category: "Data Science & ML", badgeUrl: "https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" },
+    { name: "YOLOv8", category: "Data Science & ML", badgeUrl: "https://img.shields.io/badge/YOLOv8-00BFFF?style=for-the-badge&logoColor=white" },
+    { name: "Git", category: "Tools & DevOps", badgeUrl: "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" },
+    { name: "GitHub", category: "Tools & DevOps", badgeUrl: "https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" },
+    { name: "Docker", category: "Tools & DevOps", badgeUrl: "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" },
+    { name: "VS Code", category: "Tools & DevOps", badgeUrl: "https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" },
+    { name: "Jupyter", category: "Tools & DevOps", badgeUrl: "https://img.shields.io/badge/Jupyter-FA0F00?style=for-the-badge&logo=jupyter&logoColor=white" },
+    { name: "Power BI", category: "Analytics & Visualization", badgeUrl: "https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" },
+    { name: "Tableau", category: "Analytics & Visualization", badgeUrl: "https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" }
   ];
 
   const fileGroups = [
@@ -396,8 +389,7 @@
     <section class="editor-section">
       <div class="section-topline"><h2 class="section-heading">Selected project briefs</h2><button class="text-link" type="button" data-panel="projects">Browse all →</button></div>
       <div class="project-grid">${projects.slice(0, 2).map(projectCard).join("")}</div>
-    </section>
-    <p class="callout">Project pages distinguish proposed ideas from verified implementation. Add confirmed repository links, contributions, results, and dates as they become available.</p>`;
+    </section>`;
   }
 
   function projectCard(project) {
@@ -407,7 +399,7 @@
       <h3>${escapeHtml(project.name)}</h3>
       <p>${escapeHtml(project.description)}</p>
       <div class="tag-list">${project.stack.slice(0, 4).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
-      <div class="card-links"><button class="button" type="button" data-open="${escapeHtml(project.id)}">Read project brief</button>${repoUrl ? `<a class="text-link" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">Repository ↗</a>` : ""}</div>
+      <div class="card-links"><button class="button" type="button" data-open="${escapeHtml(project.id)}">Read project brief</button>${repoUrl ? `<a class="text-link" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">Repository ↗</a>` : ""}${project.liveUrl ? `<a class="text-link" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>` : ""}</div>
     </article>`;
   }
 
@@ -428,8 +420,8 @@
       <span class="project-category">${escapeHtml(project.category)}</span>
       <h1 class="project-title">${escapeHtml(project.name)}</h1>
       <p class="lead">${escapeHtml(project.description)}</p>
-      <div class="button-row"><span class="tag">${escapeHtml(project.status)}</span>${repoUrl ? `<a class="button" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>` : `<span class="tag">Repository link not supplied</span>`}</div>
-      <p class="callout">Scope and feature ideas below reflect the supplied brief. Proposed items are not claims of completed implementation; no performance, deployment, or user metrics have been provided.</p>
+      <div class="button-row"><span class="tag">${escapeHtml(project.status)}</span>${repoUrl ? `<a class="button" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>` : `<span class="tag">Repository link not supplied</span>`}${project.liveUrl ? `<a class="button" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>` : ""}</div>
+      ${project.demoEmbedUrl ? `<section class="editor-section"><h2 class="section-heading">Demo video</h2><div class="project-demo"><iframe src="${escapeHtml(project.demoEmbedUrl)}" width="504" height="399" loading="lazy" allowfullscreen title="${escapeHtml(project.name)} demo video"></iframe></div></section>` : ""}
       <div class="detail-grid">
         <section class="info-card"><h3>Problem</h3><p>${escapeHtml(project.problem)}</p></section>
         <section class="info-card"><h3>Proposed solution</h3><p>${escapeHtml(project.solution)}</p></section>
@@ -445,11 +437,12 @@
   }
 
   function renderSkills() {
-    const filters = ["All Skills", "Programming", "Machine Learning", "Generative AI", "Software Engineering", "Tools"];
+    const categories = [...new Set(skills.map(skill => skill.category))];
+    const filters = ["All Skills", ...categories];
     const shown = state.skillFilter === "All Skills" ? skills : skills.filter(skill => skill.category === state.skillFilter);
     return `${sectionHeader("Skills explorer", "PORTFOLIO / SKILLS_DASHBOARD.MD", "An editable overview of technologies and concepts. These categories are not proficiency ratings or claims of production-level experience.")}
       <div class="filter-row" role="group" aria-label="Filter skills">${filters.map(category => `<button class="filter-chip" type="button" data-skill-filter="${escapeHtml(category)}" aria-pressed="${state.skillFilter === category}">${escapeHtml(category)}</button>`).join("")}</div>
-      <div class="skill-grid">${shown.map(skill => `<article class="skill-card"><span class="skill-category">${escapeHtml(skill.category)}</span><strong>${escapeHtml(skill.name)}</strong><p>${escapeHtml(skill.description)}</p></article>`).join("")}</div>`;
+      <div class="skill-badge-groups">${categories.filter(category => state.skillFilter === "All Skills" || category === state.skillFilter).map(category => `<section class="skill-badge-group"><h2 class="section-heading">${escapeHtml(category)}</h2><div class="skill-badge-list">${shown.filter(skill => skill.category === category).map((skill, index) => `<div class="skill-badge-item" style="--skill-index:${index}"><img src="${escapeHtml(skill.badgeUrl)}" alt="${escapeHtml(skill.name)}" loading="lazy"></div>`).join("")}</div></section>`).join("")}</div>`;
   }
 
   function aboutSource() {
@@ -495,21 +488,21 @@
   function renderExperience() {
     const entries = [
       ["AI Engineering Intern", "Rubixe AI Solution", "2026 – Present", "Built machine-learning workflows with Python, Pandas, NumPy, and Scikit-learn; performed exploratory analysis, preprocessing, and feature engineering; supported end-to-end model development; and created Power BI dashboards."],
-      ["AI Engineering Training", "DataMites · AI Engineer program", "In progress", "AI Engineer training is listed as in progress. Add confirmed start/end dates and completed curriculum details when available."],
-      ["Master of Computer Applications (MCA)", "Atal Bihari Vajpayee University", "July 2026", "Degree completion date as listed in the supplied résumé."],
-      ["B.Sc. Mathematics", "Atal Bihari Vajpayee University", "April 2024", "Degree completion date as listed in the supplied résumé."]
+      ["AI Engineering Training", "DataMites · AI Engineer program", "", ""],
+      ["Master of Computer Applications (MCA)", "Atal Bihari Vajpayee University", "July 2026", ""],
+      ["B.Sc. Mathematics", "Atal Bihari Vajpayee University", "April 2024", ""]
     ];
     return `${sectionHeader("Experience & education", "PORTFOLIO / EXPERIENCE.MD", "Internship, training, and education details transcribed from the supplied résumé.")}
-      <div class="timeline">${entries.map(([role, org, dates, copy], index) => `<article class="timeline-card"><span class="timeline-meta">${index === 0 ? "INTERNSHIP" : index === 1 ? "TRAINING" : "EDUCATION"} · ${escapeHtml(dates)}</span><h3>${escapeHtml(role)}</h3><p>${escapeHtml(org)}</p><p>${escapeHtml(copy)}</p></article>`).join("")}</div>
+      <div class="timeline">${entries.map(([role, org, dates, copy], index) => `<article class="timeline-card"><span class="timeline-meta">${index === 0 ? "INTERNSHIP" : index === 1 ? "TRAINING" : "EDUCATION"}${dates ? ` · ${escapeHtml(dates)}` : ""}</span><h3>${escapeHtml(role)}</h3><p>${escapeHtml(org)}</p>${copy ? `<p>${escapeHtml(copy)}</p>` : ""}</article>`).join("")}</div>
       <section class="editor-section"><h2 class="section-heading">Leadership & achievements</h2><div class="detail-grid">
-        <article class="info-card"><h3>Team Leader · Smart India Hackathon 2025</h3><p>Leadership role as stated in the résumé; event placement or award not specified.</p></article>
-        <article class="info-card"><h3>First Place · National Mathematics Day Speech Competition 2025</h3><p>Achievement as stated in the résumé.</p></article>
-        <article class="info-card"><h3>AI research paper presentation · 2026</h3><p>Presented at the ABVV-AIMT Summer International Conference. Paper title and publication details were not supplied.</p></article>
+        <article class="info-card"><h3>Team Leader · Smart India Hackathon 2025</h3></article>
+        <article class="info-card"><h3>First Place · National Mathematics Day Speech Competition 2025</h3></article>
+        <article class="info-card"><h3>AI research paper presentation · 2026</h3></article>
       </div></section>`;
   }
 
   function renderResume() {
-    return `${sectionHeader("Resume", "PORTFOLIO / RESUME.MD", "Résumé summary based on the PDF supplied for this portfolio.")}
+    return `${sectionHeader("Resume", "PORTFOLIO / RESUME.MD")}
       <div class="resume-heading"><img src="assets/jitendra-dewangan.jpg" alt="" width="768" height="1152"><div><h2 class="section-heading">Jitendra Dewangan</h2><p><strong>GenAI / AI Engineer | LLM | RAG | Agentic AI | Python</strong></p><p>Bengaluru, Karnataka · <a href="mailto:${emailAddress}">${emailAddress}</a></p><p><a class="text-link" href="${githubUrl}" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="text-link" href="${linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></div></div>
       <p class="lead">AI Engineer with hands-on experience in Python, machine learning, LangChain, Google Gemini API, FastAPI, SQL, REST APIs, and AI application development. Built LLM-powered applications including a LangChain + Gemini chatbot and an AI nutrition assistant, and currently developing a retrieval-augmented enterprise knowledge assistant.</p>
       <section class="editor-section"><h2 class="section-heading">Technical skills</h2><div class="tag-list">${["Python", "SQL", "JavaScript", "HTML", "CSS", "LangChain", "Google Gemini API", "OpenAI", "Agentic AI", "RAG", "Embeddings", "Vector Search", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "OCR", "FastAPI", "REST APIs", "MySQL", "PostgreSQL", "MongoDB", "Docker (Basic)", "AWS (Basic)", "Power BI", "Tableau"].map(tag => `<span class="tag">${tag}</span>`).join("")}</div></section>
@@ -517,17 +510,16 @@
       <section class="editor-section">${renderExperience()}</section>
       <section class="editor-section"><h2 class="section-heading">Certifications & training</h2><div class="detail-grid">
         <article class="info-card"><h3>IBM Machine Learning</h3><p>2025</p></article>
-        <article class="info-card"><h3>E&ICT Academy, IIT Kanpur</h3><p>2025 · listed in the résumé; specific credential title not supplied.</p></article>
-        <article class="info-card"><h3>DataMites AI Engineer</h3><p>In progress</p></article>
-        <article class="info-card"><h3>IABAC Certified Data Scientist</h3><p>In progress</p></article>
+        <article class="info-card"><h3>E&ICT Academy, IIT Kanpur</h3></article>
+        <article class="info-card"><h3>DataMites AI Engineer</h3></article>
+        <article class="info-card"><h3>IABAC Certified Data Scientist</h3></article>
       </div></section>
-      <div class="resume-placeholder"><span aria-hidden="true">ⓘ</span><span><strong>Résumé PDF available.</strong> Open or download the PDF supplied by Jitendra.</span></div>
       <div class="button-row"><a class="button" href="${resumeUrl}" target="_blank" rel="noopener noreferrer">View Resume PDF ↗</a><a class="button primary" href="${resumeUrl}" download="Jitendra-Dewangan-Resume.pdf">Download PDF ↓</a><button class="button" type="button" data-copy-email>Copy Email</button></div>`;
   }
 
   function renderMachineLearning() {
-    return `${sectionHeader("Machine learning project briefs", "PROJECTS / MACHINE_LEARNING_PROJECTS.MD", "The résumé confirms a MobileNet transfer-learning classification project. Dataset, class, metrics, results, and repository details were not supplied; other listed project names need verification.")}
-      <div class="project-grid">${mlProjects.map(item => `<article class="project-card"><span class="project-category">MACHINE LEARNING</span><h3>${escapeHtml(item.name)}</h3><p>Objective, dataset, preprocessing, model selection, evaluation, results, and repository link: add verified details.</p><div class="card-links"><span class="tag">Details needed</span></div></article>`).join("")}</div>`;
+    return `${sectionHeader("Machine learning projects", "PROJECTS / MACHINE_LEARNING_PROJECTS.MD")}
+      <div class="project-grid">${mlProjects.map(item => `<article class="project-card"><span class="project-category">MACHINE LEARNING</span><h3>${escapeHtml(item.name)}</h3>${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}${item.repoUrl ? `<div class="card-links"><a class="text-link" href="${escapeHtml(item.repoUrl)}" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>` : ""}</article>`).join("")}</div>`;
   }
 
   function renderLlmEngineering() {
@@ -649,7 +641,7 @@
   function searchIndex() {
     const fileEntries = [...filesById.values()].map(file => ({ id: file.id, title: file.name, detail: file.folder || "workspace root", text: `${file.name} ${file.folder} ${file.id}` }));
     const projectEntries = projects.map(project => ({ id: project.id, title: project.name, detail: project.category, text: `${project.name} ${project.description} ${project.keywords} ${project.stack.join(" ")}` }));
-    const skillEntries = skills.map(skill => ({ id: "skills-dashboard", title: skill.name, detail: skill.category, text: `${skill.name} ${skill.category} ${skill.description}` }));
+    const skillEntries = skills.map(skill => ({ id: "skills-dashboard", title: skill.name, detail: skill.category, text: `${skill.name} ${skill.category}` }));
     const pageEntries = [
       { id: "about", title: "About Jitendra", text: "professional introduction career goals interests engineering philosophy learning priorities practical AI machine learning software" },
       { id: "career-goals", title: "Career goals", text: "AI product engineer problem discovery prototyping evaluation iteration LLM retrieval agent workflows APIs reliable APIs user-centered software" },
